@@ -26,9 +26,7 @@ h3 {
     font-weight: 400;
 }
 
-ul {
-    padding-left: 2rem;
-}
+ul { padding-left: 2rem; }
 
 #LeftImage, #RightContent { min-height: 100vh; }
 
@@ -58,9 +56,7 @@ ul {
         -webkit-box-decoration-break: clone;
     }
 
-    .content-wrapper {
-        padding-left: 2rem;
-    }
+    .content-wrapper { padding-left: 2rem; }
 
     .links {
         margin-top: 2rem;
@@ -73,18 +69,43 @@ ul {
         }
 
 
-        ul {
-            margin-top: 1rem;
-        }
+        ul { margin-top: 1rem; }
 
         li {
             font-size: 1.5rem;
+            margin: .5rem 0; 
 
             a {
                 color: rgb(204, 210, 231);
                 &:hover { color: #05B0E6; }
-                // &:visited { color:  rgb(204, 210, 231);}
             }
         }
+    }
+}
+
+@media screen and (max-width: 904px) {
+    main { flex-direction: column-reverse; }
+
+    #LeftImage { display: none; }
+    #RightContent { min-height: 50vh; }
+}
+
+
+@media screen and (max-width: 562px) {
+    html { font-size: 90%; }
+    #LeftImage { display: initial; }
+    #LeftImage { border-top: 7px solid #1C031E; }
+    #LeftImage, #RightContent { min-height: initial; }
+    #RightContent { flex: 1 }
+}
+
+@media screen and (max-width: 492px) {
+    html { font-size: 80%; }
+}
+
+@media screen and (max-width: 434px) {
+    html { font-size: 75%; }
+    #RightContent {
+        .content-wrapper { padding: 0 .75rem; }
     }
 }

@@ -76,10 +76,60 @@ ul {
 }
 #RightContent .links li {
   font-size: 1.5rem;
+  margin: 0.5rem 0;
 }
 #RightContent .links li a {
   color: rgb(204, 210, 231);
 }
 #RightContent .links li a:hover {
   color: #05B0E6;
+}
+
+@media screen and (max-width: 904px) {
+  main {
+    flex-direction: column-reverse;
+  }
+
+  #LeftImage {
+    display: none;
+  }
+
+  #RightContent {
+    min-height: 50vh;
+  }
+}
+@media screen and (max-width: 562px) {
+  html {
+    font-size: 90%;
+  }
+
+  #LeftImage {
+    display: initial;
+  }
+
+  #LeftImage {
+    border-top: 7px solid #1C031E;
+  }
+
+  #LeftImage, #RightContent {
+    min-height: initial;
+  }
+
+  #RightContent {
+    flex: 1;
+  }
+}
+@media screen and (max-width: 492px) {
+  html {
+    font-size: 80%;
+  }
+}
+@media screen and (max-width: 434px) {
+  html {
+    font-size: 75%;
+  }
+
+  #RightContent .content-wrapper {
+    padding: 0 0.75rem;
+  }
 }/*# sourceMappingURL=Globals.css.map */
